@@ -1,0 +1,21 @@
+keelingclassdata1 = readtable("Copy of Keeling Data for Matlab.xlsx")
+for i = 1:12
+    keelingclassdata1.Climatology(i) = mean(keelingclassdata1.NINO3_4(keelingclassdata1.MON == i & keelingclassdata1.YR <= 2001));
+end
+
+keelingclassdata1.Climatology
+
+for i = 1:536
+    keelingclassdata1.ANOM_4(i) = keelingclassdata1.NINO3_4(i) - keelingclassdata1.Climatology(keelingclassdata1.MON(i));
+end
+keelingclassdata1.ANOM_4
+texttime = string(keelingclassdata1.MON) + "/" + string(keelingclassdata1.YR)
+d = datetime(texttime,"Format","MM/uuuu")
+plot(d,keelingclassdata1.ANOM_4)
+hold on
+plot(d,keelingclassdata1.ANOM_3)
+hold off
+legend('Calculated','Sheet')
+ylabel('SST Anomaly [\circ C]')
+xlabel('Time')
+title('SST Anomaly from 1982-2001 Climatology')
