@@ -190,7 +190,8 @@ rebuildCache = false;     % true: re-read every instrument (~1-2 min) instead of
 scriptDir = fileparts(mfilename('fullpath'));
 epcapeDir = fileparts(scriptDir);
 outDir    = fullfile(scriptDir, 'output');
-processed = "/Users/andrewbuggee/Documents/VS_CODE/Python-Research/EPCAPE/data/processed";
+% processed = "/Users/andrewbuggee/Documents/VS_CODE/Python-Research/EPCAPE/data/processed";
+processed = "/Users/2fast2kavin/Desktop/Atmospheric Aerosol Group/EPCAPE/EPCAPE_KP_AJB";
 productsFolder = fullfile(processed, "Aerosol Quantification Products");
 
 files.radflux      = fullfile(processed, "radflux_M1_20230215_20240214.nc");
