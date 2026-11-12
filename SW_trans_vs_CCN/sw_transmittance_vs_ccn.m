@@ -1,5 +1,5 @@
 %% EPCAPE: shortwave transmittance at the Scripps Pier vs. Pier CCN, grouped by cloud supersaturation
-%
+% kavin
 % DESCRIPTION:
 %   Scatter plot of the surface SW transmittance (y) against the Pier CCN
 %   concentration (x), averaged over consecutive averageWindow_min windows
